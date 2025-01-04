@@ -1,4 +1,4 @@
-import App from '../pages/App'
+import App from '../pages/home/Home'
 
 import { Navigate, RouterProvider, createBrowserRouter } from 'react-router'
 
