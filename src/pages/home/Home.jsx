@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from '../../assets/react.svg'
-import viteLogo from '/vite.svg'
+import homeBanner from '../../assets/home-banner.jpg'
+import Banner from '../../components/banner/Banner'
+import Gallery from '../../components/gallery/Gallery'
+import Loader from '../../components/loader/Loader'
+import accommodationsData from '../../data/logements.json'
+import { useFetchData } from '../../hooks/useFetchData'
 import './Home.scss'
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+/**
+ * Renders the Home page component.
+ *
+ * @returns {JSX.Element} The Home page component.
+ */
+export default function Home() {
+    const { isLoading, data } = useFetchData(accommodationsData)
+    return (
+        <main className="content container">
+            <Banner title="Chez vous, partout et ailleurs" image={homeBanner} />
+            <section className="logements">
+                <h2 className="sr-only">Liste de logements</h2>
+                {isLoading ? (
+                    <Loader />
+                ) : !data ? (
+                    <div>Pas de données disponibles</div>
+                ) : (
+                    <Gallery accommodations={data} />
+                )}
+            </section>
+        </main>
+    )
 }
-
-export default App
