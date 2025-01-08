@@ -2,12 +2,7 @@ import PropTypes from 'prop-types'
 import Card from '../card/Card'
 import './Gallery.scss'
 
-/**
- * Gallery component that displays a list of accommodations.
- *
- * @param {Object[]} props.accommodations - The accommodations to display.
- * @returns {React.Element} The rendered Gallery component.
- */
+
 export default function Gallery({ accommodations }) {
     return (
         <ul className="gallery">
@@ -18,7 +13,7 @@ export default function Gallery({ accommodations }) {
     )
 }
 
-// PropTypes
+
 Gallery.propTypes = {
     accommodations: PropTypes.arrayOf(PropTypes.object).isRequired,
 }

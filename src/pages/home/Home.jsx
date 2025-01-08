@@ -6,11 +6,7 @@ import accommodationsData from '../../data/logements.json'
 import { useFetchData } from '../../hooks/useFetchData'
 import './Home.scss'
 
-/**
- * Renders the Home page component.
- *
- * @returns {JSX.Element} The Home page component.
- */
+
 export default function Home() {
     const { isLoading, data } = useFetchData(accommodationsData)
     return (

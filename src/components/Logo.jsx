@@ -1,13 +1,5 @@
 import { PropTypes } from 'prop-types'
-/**
- * Logo component.
- *
- * @param {string} color - The color of the logo. Default is '#FF6060'.
- * @param {number|string} width - The width of the logo. Default is '211'.
- * @param {number|string} height - The height of the logo. Default is '68'.
- * @param {string} label - The label for the logo. Default is 'Kasa'.
- * @returns {JSX.Element} The logo component.
- */
+
 export default function Logo({ color = '#FF6060', width, height, label }) {
     return (
         <svg
@@ -29,7 +21,7 @@ export default function Logo({ color = '#FF6060', width, height, label }) {
     )
 }
 
-// Props type definition
+
 Logo.propTypes = {
     color: PropTypes.string,
     width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

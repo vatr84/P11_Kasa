@@ -1,14 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 
-/**
- * Custom hook to fetch data from a given URL or use local JSON data.
- *
- * @param {string | Object} urlOrData - The URL to fetch data from, or the local JSON data to use.
- * @returns {Object} The fetched data, the loading state, and the error state.
- * @property {Object} data - The fetched data.
- * @property {boolean} loading - The loading state.
- * @property {Object} error - The error state.
- */
+
 export function useFetchData(urlOrData) {
     const [state, setState] = useState({
         isLoading: true,
