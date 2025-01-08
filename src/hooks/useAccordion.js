@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 const DURATION = 250
 const EASING = 'ease-out'
 
-/
+
 export default function useAccordion(detailsRef, summaryRef, contentRef) {
     useEffect(() => {
         
