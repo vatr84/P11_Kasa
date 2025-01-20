@@ -1,6 +1,6 @@
 @use "./variables" as *;
 
-/* Root and Body Styles */
+/* Root, Body */
 :root {
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -26,7 +26,7 @@ body > div {
     min-height: calc(100svh - 2.375rem);
 }
 
-/* Heading Styles */
+/* Heading */
 h1,
 h2 {
     text-wrap: balance;
@@ -44,7 +44,7 @@ h2 {
     color: $color-neutral-900;
 }
 
-/* List and Link Styles */
+/* List, Link */
 ul[class] {
     list-style: none;
     padding: 0;
@@ -56,7 +56,7 @@ a[class] {
     color: inherit;
 }
 
-/* Image and SVG Styles */
+/* Image, SVG */
 img,
 svg {
     max-width: 100%;
@@ -68,7 +68,7 @@ svg {
     shape-margin: 1rem;
 }
 
-/* Container Styles */
+/* Container */
 .container {
     width: min(calc(100% - 2.5rem), 1240px);
     margin-inline: auto;
