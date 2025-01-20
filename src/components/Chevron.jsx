@@ -1,13 +1,6 @@
 import PropTypes from 'prop-types'
 
-/**
- * Renders a Chevron component.
- *
- * @param {Object} props - The component props.
- * @param {string} props.direction - The direction of the chevron ('left' or 'right').
- * @param {string} [props.color='currentColor'] - The color of the chevron.
- * @returns {JSX.Element} The rendered Chevron component.
- */
+
 export default function Chevron({
     direction,
     color = 'currentColor',
@@ -38,7 +31,7 @@ export default function Chevron({
     )
 }
 
-// Prop types definition
+
 Chevron.propTypes = {
     direction: PropTypes.oneOf(['left', 'right']).isRequired,
     color: PropTypes.string,

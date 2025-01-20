@@ -1,5 +1,5 @@
 import aboutBanner from '../../assets/about-banner.jpg'
-import Accordion from '../../components/collapse/Collapse'
+import Collapse from '../../components/collapse/Collapse'
 import Banner from '../../components/banner/Banner'
 import Loader from '../../components/loader/Loader'
 import aboutData from '../../data/about.json'
@@ -25,7 +25,7 @@ export default function About() {
                     <div>Pas de données disponibles</div>
                 ) : (
                     data.map((section, index) => (
-                        <Accordion
+                        <Collapse
                             key={index}
                             title={section.title}
                             content={section.content}

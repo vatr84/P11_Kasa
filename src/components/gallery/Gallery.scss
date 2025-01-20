@@ -6,12 +6,12 @@
     --gallery-min-column-width: 350px;
 }
 
-// Styles for the Gallery component
+
 .gallery {
     display: grid;
     gap: var(--gallery-gap);
 
-    // Increase the gap and set up a responsive grid for larger screens
+    
     @media (min-width: $breakpoint-medium) {
         gap: var(--gallery-gap-large);
         grid-template-columns: repeat(

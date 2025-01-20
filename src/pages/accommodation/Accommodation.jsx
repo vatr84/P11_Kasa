@@ -11,12 +11,7 @@ import Carousel from '../../components/carousel/Carousel'
 import { useFetchData } from '../../hooks/useFetchData'
 import './Accommodation.scss'
 
-/**
- * Custom hook to fetch accommodation data based on the provided URL.
- *
- * @param {string} url - The URL to fetch data from.
- * @returns {Object} The loading state and the accommodation data.
- */
+
 const useAccommodation = (url) => {
     const { isLoading, data: accommodations } = useFetchData(url)
     const { id } = useParams()
@@ -27,10 +22,7 @@ const useAccommodation = (url) => {
     return { isLoading, accommodation }
 }
 
-/**
- * Accommodation component. Displays accommodation details.
- * @component
- */
+
 export default function Accommodation() {
     useScrollToTop()
     const navigate = useNavigate()
@@ -38,7 +30,7 @@ export default function Accommodation() {
 
     useEffect(() => {
         if (!accommodation && !isLoading) {
-            navigate('/404') // Redirect to the NotFound page
+            navigate('/404') 
         }
     }, [accommodation, isLoading, navigate])
 

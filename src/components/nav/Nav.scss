@@ -5,22 +5,22 @@
     --nav-link-active-underline-offset: 0.25em;
 }
 
-// Styles for the Nav component
+
 .nav {
     display: flex;
     align-items: center;
     gap: var(--nav-gap);
 
-    // Styles for the links inside the Nav
+    
     &__link {
-        font-size: var(--nav-link-font-size); // Responsive font size
+        font-size: var(--nav-link-font-size); 
         text-transform: uppercase;
         @media (min-width: $breakpoint-medium) {
             text-transform: none;
         }
     }
 
-    // Styles for the active link inside the Nav
+    
     &__link.active {
         text-decoration: underline;
         text-underline-offset: var(--nav-link-active-underline-offset);

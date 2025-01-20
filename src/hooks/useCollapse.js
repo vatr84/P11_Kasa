@@ -5,7 +5,7 @@ const DURATION = 250
 const EASING = 'ease-out'
 
 /**
- * Custom hook to handle the opening and closing of the accordion
+ * Custom hook to handle the opening and closing of the Collapse
  * @param {React.RefObject} detailsRef - Ref to the details element
  * @param {React.RefObject} summaryRef - Ref to the summary element
  * @param {React.RefObject} contentRef - Ref to the content element
@@ -28,17 +28,17 @@ export default function useCollapse(detailsRef, summaryRef, contentRef) {
             e.preventDefault()
             details.style.overflow = 'hidden'
 
-            // If the accordion is open, close it
+            // If the Collapse is open, close it
             if (details.open) {
                 shrink()
-                // If the accordion is closed, open it
+                // If the Collapse is closed, open it
             } else {
                 open()
             }
         }
 
         /**
-         * Close the accordion
+         * Close the Collapse
          */
         const shrink = () => {
             const startHeight = `${details.offsetHeight}px`
@@ -57,7 +57,7 @@ export default function useCollapse(detailsRef, summaryRef, contentRef) {
         }
 
         /**
-         * Open the accordion
+         * Open the Collapse
          */
         const open = () => {
             details.style.height = `${details.offsetHeight}px`
@@ -66,7 +66,7 @@ export default function useCollapse(detailsRef, summaryRef, contentRef) {
         }
 
         /**
-         * Expand the accordion
+         * Expand the Collapse
          */
         const expand = () => {
             const startHeight = `${details.offsetHeight}px`
@@ -86,7 +86,7 @@ export default function useCollapse(detailsRef, summaryRef, contentRef) {
 
         /**
          * Clean up after the animation finishes
-         * @param {boolean} open - Whether the accordion is open or not
+         * @param {boolean} open - Whether the Collapse is open or not
          */
         const onAnimationFinish = (open) => {
             animation = null

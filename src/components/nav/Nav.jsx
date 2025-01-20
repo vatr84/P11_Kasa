@@ -28,7 +28,7 @@ export default function Nav({ links }) {
     )
 }
 
-// PropTypes definition
+
 
 Nav.propTypes = {
     links: PropTypes.objectOf(

@@ -6,7 +6,7 @@
     --footer-color: #fff;
 }
 
-// Styles for the Footer component
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@
     background-color: var(--footer-background-color);
     color: var(--footer-color);
 
-    // Styles for the logo inside the Footer
+    
     .logo {
         max-width: var(--logo-max-width);
     }

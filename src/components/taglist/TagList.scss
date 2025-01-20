@@ -10,14 +10,14 @@
     --tag-color: #{$color-neutral-0};
 }
 
-// Styles for the TagList component
+
 .tagList {
     display: flex;
     flex-wrap: wrap;
     gap: var(--tag-list-gap);
     margin-block: var(--tag-list-margin-block);
 
-    // Styles for the tag inside the TagList
+    
     .tag {
         display: inline-block;
         background-color: var(--tag-background-color);

@@ -1,12 +1,6 @@
 import PropTypes from 'prop-types'
 
-/**
- * Star component
- *
- * @param {Object} props - Star props
- * @param {string} props.fill - The fill color of the star
- * @returns {JSX.Element} Star component JSX
- */
+
 function Star({ fill }) {
     return (
         <svg
@@ -22,14 +16,7 @@ function Star({ fill }) {
     )
 }
 
-/**
- * Rating component
- * @param {Object} props - Rating props
- * @param {number} props.score - The score to display
- * @param {string} props.activeColor - The color of the active stars
- * @param {string} props.mutedColor - The color of the inactive stars
- * @returns {JSX.Element} Rating component JSX
- */
+
 export default function Rating({
     score,
     activeColor = '#000',
@@ -44,7 +31,7 @@ export default function Rating({
     )
 }
 
-// Prop types definition
+
 Star.propTypes = {
     fill: PropTypes.string.isRequired,
 }

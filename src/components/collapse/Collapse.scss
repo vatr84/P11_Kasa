@@ -1,49 +1,49 @@
 @use "../../variables.scss" as *;
 
 :root {
-    --accordion-padding: 0.625rem;
-    --accordion-title-size: 0.812rem;
-    --accordion-content-size: 0.875rem;
-    --accordion-icon-size: 1.5em;
-    --accordion-background-color: #{$color-neutral-100};
-    --accordion-border-radius: #{$radius-small};
-    --accordion-title-background-color: #{$color-primary};
-    --accordion-title-color: #{$color-neutral-0};
-    --accordion-title-weight: 700;
+    --collapse-padding: 0.625rem;
+    --collapse-title-size: 0.812rem;
+    --collapse-content-size: 0.875rem;
+    --collapse-icon-size: 1.5em;
+    --collapse-background-color: #{$color-neutral-100};
+    --collapse-border-radius: #{$radius-small};
+    --collapse-title-background-color: #{$color-primary};
+    --collapse-title-color: #{$color-neutral-0};
+    --collapse-title-weight: 700;
     @media (min-width: $breakpoint-medium) {
-        --accordion-padding: 0.875rem 1rem;
-        --accordion-title-size: 1.125rem;
-        --accordion-content-size: 1rem;
+        --collapse-padding: 0.875rem 1rem;
+        --collapse-title-size: 1.125rem;
+        --collapse-content-size: 1rem;
     }
 }
 
-.accordion {
-    background-color: var(--accordion-background-color);
-    border-radius: var(--accordion-border-radius);
+.collapse {
+    background-color: var(--collapse-background-color);
+    border-radius: var(--collapse-border-radius);
     overflow: hidden;
     width: 100%;
 
     // Styles communs pour le titre et le contenu
     &__title,
     &__content {
-        padding: var(--accordion-padding);
+        padding: var(--collapse-padding);
     }
 
     &__title {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: var(--accordion-title-background-color);
-        color: var(--accordion-title-color);
-        font-size: var(--accordion-title-size);
-        font-weight: var(--accordion-title-weight);
+        background-color: var(--collapse-title-background-color);
+        color: var(--collapse-title-color);
+        font-size: var(--collapse-title-size);
+        font-weight: var(--collapse-title-weight);
         cursor: pointer;
 
         // Styles pour l'icône de flèche
         &::after {
             content: "";
-            height: var(--accordion-icon-size);
-            width: var(--accordion-icon-size);
+            height: var(--collapse-icon-size);
+            width: var(--collapse-icon-size);
             background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 512 512'><path fill='white' d='M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7L86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z'/></svg>");
             background-size: contain;
             background-position: center;
@@ -52,16 +52,16 @@
     }
 
     &__content {
-        font-size: var(--accordion-content-size);
+        font-size: var(--collapse-content-size);
 
         p:first-of-type {
             margin-block-start: 0;
         }
     }
 
-    // Styles pour l'icône de flèche lorsque l'accordéon est ouvert
+    // Styles pour l'icône de flèche lorsque le Collapse est ouvert
     &[open] {
-        .accordion__title::after {
+        .collapse__title::after {
             transform: scale3d(1, -1, 1);
         }
     }

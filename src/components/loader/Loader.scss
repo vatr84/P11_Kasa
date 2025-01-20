@@ -9,7 +9,7 @@
     --loader-opacity: 0.6;
 }
 
-// Styles for the Loader component
+
 .loader {
     width: var(--loader-size);
     height: var(--loader-size);
@@ -17,7 +17,7 @@
     margin: var(--loader-margin);
 }
 
-// Styles for the bouncing elements inside the Loader
+
 .double-bounce1,
 .double-bounce2 {
     width: 100%;
@@ -29,16 +29,16 @@
     top: 0;
     left: 0;
 
-    // Use the same animation for both elements
+    
     animation: sk-bounce var(--loader-animation-duration) infinite ease-in-out;
 }
 
-// Delay the animation of the second element
+
 .double-bounce2 {
     animation-delay: var(--loader-animation-delay);
 }
 
-// Define the bouncing animation
+
 @keyframes sk-bounce {
     0%,
     100% {
