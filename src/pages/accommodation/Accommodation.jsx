@@ -11,7 +11,7 @@ import Carousel from '../../components/carousel/Carousel'
 import { useFetchData } from '../../hooks/useFetchData'
 import './Accommodation.scss'
 
-
+// Hook personnalisé pour récupérer les données d’hébergement en fonction de l’URL fournie.
 const useAccommodation = (url) => {
     const { isLoading, data: accommodations } = useFetchData(url)
     const { id } = useParams()
@@ -22,7 +22,7 @@ const useAccommodation = (url) => {
     return { isLoading, accommodation }
 }
 
-
+// Volet hébergement. Affiche les détails de l'hébergement.
 export default function Accommodation() {
     useScrollToTop()
     const navigate = useNavigate()
