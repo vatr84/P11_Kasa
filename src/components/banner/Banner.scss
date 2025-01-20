@@ -14,7 +14,7 @@
     }
 }
 
-// Styling for the banner component
+
 .banner {
     position: relative;
     display: grid;
@@ -32,7 +32,7 @@
     background-position: center;
     overflow: hidden;
 
-    // Styling for the title inside the banner
+    
     &__title {
         padding: var(--banner-title-padding);
         margin: 0;
