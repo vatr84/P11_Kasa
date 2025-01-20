@@ -6,7 +6,7 @@ import accommodationsData from '../../data/logements.json'
 import { useFetchData } from '../../hooks/useFetchData'
 import './Home.scss'
 
-
+// Rend le composant de la page d'accueil.
 export default function Home() {
     const { isLoading, data } = useFetchData(accommodationsData)
     return (
