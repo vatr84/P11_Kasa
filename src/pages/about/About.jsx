@@ -6,11 +6,7 @@ import aboutData from '../../data/about.json'
 import { useFetchData } from '../../hooks/useFetchData'
 import './About.scss'
 
-/**
- * Renders the About page component.
- *
- * @returns {JSX.Element} The About page component.
- */
+
 export default function About() {
     const { isLoading, data } = useFetchData(aboutData)
 
