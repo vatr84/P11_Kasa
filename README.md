@@ -20,8 +20,11 @@
    git clone https://github.com/vatr84/P11_Kasa.git
    ```
 2. cd P11_Kasa
+   ```sh
+   cd P11_Kasa
+   ```
    
-3. Installer les packages
+4. Installer les packages
    ```sh
    npm install
    ```
