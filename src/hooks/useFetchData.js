@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-
+// Hook personnalisé pour récupérer des données à partir d’une URL donnée ou utiliser des données JSON locales.
 export function useFetchData(urlOrData) {
     const [state, setState] = useState({
         isLoading: true,
