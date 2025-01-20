@@ -1,5 +1,8 @@
 import { PropTypes } from 'prop-types'
-
+// color - La couleur du logo. La valeur par défaut est '#FF6060'.
+// width - La largeur du logo. La valeur par défaut est '211'.
+// height - La hauteur du logo. La valeur par défaut est '68'.
+// label - L'étiquette du logo. La valeur par défaut est 'Kasa'.
 export default function Logo({ color = '#FF6060', width, height, label }) {
     return (
         <svg
@@ -21,7 +24,7 @@ export default function Logo({ color = '#FF6060', width, height, label }) {
     )
 }
 
-
+// Définition des PropTypes
 Logo.propTypes = {
     color: PropTypes.string,
     width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
