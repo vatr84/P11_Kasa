@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-
+// fill - La couleur de remplissage de l'étoile
 function Star({ fill }) {
     return (
         <svg
@@ -18,9 +18,9 @@ function Star({ fill }) {
 
 
 export default function Rating({
-    score,
-    activeColor = '#000',
-    mutedColor = '#E3E3E3',
+    score,                    // Le score à afficher
+    activeColor = '#000',     // La couleur des étoiles actives
+    mutedColor = '#E3E3E3',   // La couleur des étoiles inactives
 }) {
     return (
         <div className="rating" aria-label={`Note de ${score} sur 5`}>
@@ -31,7 +31,7 @@ export default function Rating({
     )
 }
 
-
+// Définition des propTypes
 Star.propTypes = {
     fill: PropTypes.string.isRequired,
 }
