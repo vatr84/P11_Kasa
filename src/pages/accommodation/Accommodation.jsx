@@ -1,4 +1,4 @@
-import Accordion from '../../components/accordion/Accordion'
+import Collapse from '../../components/collapse/Collapse'
 import Loader from '../../components/loader/Loader'
 import Person from '../../components/person/Person'
 import Rating from '../../components/Rating'
@@ -86,8 +86,8 @@ export default function Accommodation() {
             </section>
             <section className="accommodation__details">
                 <h2 className="sr-only">Details</h2>
-                <Accordion title="Description" content={description} />
-                <Accordion title="Équipements" content={equipments} />
+                <Collapse title="Description" content={description} />
+                <Collapse title="Équipements" content={equipments} />
             </section>
         </main>
     )

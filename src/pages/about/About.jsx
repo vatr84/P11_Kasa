@@ -1,5 +1,5 @@
 import aboutBanner from '../../assets/about-banner.jpg'
-import Accordion from '../../components/accordion/Accordion'
+import Accordion from '../../components/collapse/Collapse'
 import Banner from '../../components/banner/Banner'
 import Loader from '../../components/loader/Loader'
 import aboutData from '../../data/about.json'

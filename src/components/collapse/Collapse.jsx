@@ -1,7 +1,7 @@
-import useAccordion from '../../hooks/useAccordion'
+import useCollapse from '../../hooks/useCollapse'
 import PropTypes from 'prop-types'
 import { useRef } from 'react'
-import './Accordion.scss'
+import './Collapse.scss'
 
 /**
  * Accordion component
@@ -18,7 +18,7 @@ export default function Accordion({ title = '', content = '' }) {
     const contentRef = useRef()
 
     // Use the custom hook to handle the opening and closing of the accordion
-    useAccordion(detailsRef, summaryRef, contentRef)
+    useCollapse(detailsRef, summaryRef, contentRef)
 
     // Process the content to render a list or a paragraph depending on the type received
     const processedContent = Array.isArray(content) ? (
